@@ -8,7 +8,7 @@ while [[ $# -gt 0 ]]; do
 
     case $key in 
 
-        --date) 
+        --date | -d) 
 
             date_flag=true 
 
