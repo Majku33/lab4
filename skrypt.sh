@@ -44,7 +44,7 @@ create_log_file() {
 
  
 
-if [[ $1 == "--help" ]]; then 
+if [[ $1 == "--help" | "-h" ]]; then 
 
     show_help 
 
