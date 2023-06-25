@@ -12,7 +12,7 @@ while [[ $# -gt 0 ]]; do
 
     case $key in 
 
-        --logs) 
+        --logs30 | -l30) 
 
             logs_flag=true 
 
