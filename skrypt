@@ -8,7 +8,7 @@ while [[ $# -gt 0 ]]; do
 
     case $key in 
 
-        --logs) 
+        --logs | -l) 
 
             logs_flag=true 
 
