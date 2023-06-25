@@ -8,13 +8,13 @@ show_help() {
 
     echo "Opcje:" 
 
-    echo "  --help        Wyświetla pomoc" 
+    echo "  --help ,-h       Wyświetla pomoc" 
 
-    echo "  --data        Używa dzisiejszej daty" 
+    echo "  --data  ,-d      Używa dzisiejszej daty" 
 
-    echo "  --logs100     Tworzy 100 plików z logami" 
+    echo "  --logs100 ,-l    Tworzy 100 plików z logami" 
 
-    echo "  --logs30 [N]  Tworzy N plików z logami" 
+    echo "  --logs30 ,-l30  Tworzy N plików z logami" 
 
     echo "                (domyślnie N = 30)" 
 
