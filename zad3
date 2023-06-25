@@ -1,1 +1,61 @@
+#!/bin/bash 
 
+ 
+
+num_plikow=30 
+
+ 
+
+while [[ $# -gt 0 ]]; do 
+
+    key="$1" 
+
+    case $key in 
+
+        --logs) 
+
+            logs_flag=true 
+
+            ;; 
+
+        *) 
+
+            if [[ $key =~ ^[0-9]+$ ]]; then 
+
+                num_plikow=$key 
+
+            else 
+
+                echo "Nieznana opcja: $key" 
+
+                exit 1 
+
+            fi 
+
+            ;; 
+
+    esac 
+
+    shift 
+
+done 
+
+ 
+
+if [ "$logs_flag" = true ]; then 
+
+    for ((i=1; i<=$num_plikow; i++)); do 
+
+        nazwa_pliku="log${i}.txt" 
+
+        dzisiaj=$(date +"%Y-%m-%d") 
+
+        echo "Nazwa pliku: $nazwa_pliku" > "$nazwa_pliku" 
+
+        echo "Nazwa skryptu: skrypt.sh" >> "$nazwa_pliku" 
+
+        echo "Data utworzenia: $dzisiaj" >> "$nazwa_pliku" 
+
+    done 
+
+fi 
